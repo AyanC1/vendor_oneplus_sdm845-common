@@ -1,4 +1,4 @@
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2019 AOSiP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -112,15 +112,16 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sdm845-common/proprietary/lib64/libqti_performance.so:system/lib64/libqti_performance.so \
     vendor/oneplus/sdm845-common/proprietary/lib/vendor.nxp.nxpese@1.0.so:system/lib/vendor.nxp.nxpese@1.0.so \
     vendor/oneplus/sdm845-common/proprietary/lib/vendor.nxp.nxpnfc@1.0.so:system/lib/vendor.nxp.nxpnfc@1.0.so \
+    vendor/oneplus/sdm845-common/proprietary/lib/vendor.qti.hardware.data.latency@1.0.so:system/lib/vendor.qti.hardware.data.latency@1.0.so \
     vendor/oneplus/sdm845-common/proprietary/lib64/android.hardware.secure_element@1.0.so:system/lib64/android.hardware.secure_element@1.0.so \
     vendor/oneplus/sdm845-common/proprietary/lib64/com.qualcomm.qti.ant@1.0.so:system/lib64/com.qualcomm.qti.ant@1.0.so \
-    vendor/oneplus/sdm845-common/proprietary/lib64/hw/hwcomposer.sdm845.so:system/lib64/hw/hwcomposer.sdm845.so \
     vendor/oneplus/sdm845-common/proprietary/lib64/com.qualcomm.qti.dpm.api@1.0.so:system/lib64/com.qualcomm.qti.dpm.api@1.0.so \
     vendor/oneplus/sdm845-common/proprietary/lib64/com.quicinc.cne.server@1.0.so:system/lib64/com.quicinc.cne.server@1.0.so \
     vendor/oneplus/sdm845-common/proprietary/lib64/vendor.qti.hardware.iop@1.0.so:system/lib64/vendor.qti.hardware.iop@1.0.so \
     vendor/oneplus/sdm845-common/proprietary/lib64/vendor.qti.hardware.iop@2.0.so:system/lib64/vendor.qti.hardware.iop@2.0.so \
     vendor/oneplus/sdm845-common/proprietary/lib64/vendor.qti.hardware.perf@1.0.so:system/lib64/vendor.qti.hardware.perf@1.0.so \
     vendor/oneplus/sdm845-common/proprietary/lib64/ese_spi_nxp.so:system/lib64/ese_spi_nxp.so \
+    vendor/oneplus/sdm845-common/proprietary/lib64/hw/hwcomposer.sdm845.so:system/lib64/hw/hwcomposer.sdm845.so \
     vendor/oneplus/sdm845-common/proprietary/lib64/lib-imsvideocodec.so:system/lib64/lib-imsvideocodec.so \
     vendor/oneplus/sdm845-common/proprietary/lib64/lib-imsvt.so:system/lib64/lib-imsvt.so \
     vendor/oneplus/sdm845-common/proprietary/lib64/lib-imsvtextutils.so:system/lib64/lib-imsvtextutils.so \
@@ -179,8 +180,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libantradio \
+    NxpNfcNci \
+    NxpSecureElement \
     QtiTelephonyService \
-    ims \
     CNEService \
     HotwordEnrollmentOKGoogleWCD9340 \
     HotwordEnrollmentXGoogleWCD9340 \
@@ -190,6 +192,7 @@ PRODUCT_PACKAGES += \
     NxpNfcNci \
     NxpSecureElement \
     dpmserviceapp \
+    ims \
     qcrilmsgtunnel \
     WfdCommon \
     vendor.oneplus.camera.CameraHIDL-V1.0-java \
